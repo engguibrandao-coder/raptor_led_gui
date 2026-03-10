@@ -1,0 +1,58 @@
+cmake:
+  application:
+    configuration-dir: '/home/gustavo1/zephyrproject/raptor_led_gui'
+    source-dir: '/home/gustavo1/zephyrproject/raptor_led_gui'
+  board:
+    name: 'esp32_devkitc'
+    path:
+     - '/home/gustavo1/zephyrproject/zephyr/boards/espressif/esp32_devkitc'
+    qualifiers: 'esp32/procpu'
+    revision: ''
+  devicetree:
+    bindings-dirs:
+     - '/home/gustavo1/zephyrproject/zephyr/dts/bindings'
+    files:
+     - '/home/gustavo1/zephyrproject/zephyr/boards/espressif/esp32_devkitc/esp32_devkitc_procpu.dts'
+    include-dirs:
+     - '/home/gustavo1/zephyrproject/modules/hal/ambiq/dts'
+     - '/home/gustavo1/zephyrproject/modules/hal/atmel/include'
+     - '/home/gustavo1/zephyrproject/modules/hal/bouffalolab/include'
+     - '/home/gustavo1/zephyrproject/modules/hal/bouffalolab/include/zephyr'
+     - '/home/gustavo1/zephyrproject/modules/hal/gigadevice/include'
+     - '/home/gustavo1/zephyrproject/modules/hal/microchip/include'
+     - '/home/gustavo1/zephyrproject/modules/hal/microchip/dts'
+     - '/home/gustavo1/zephyrproject/modules/hal/nuvoton/dts'
+     - '/home/gustavo1/zephyrproject/modules/hal/nxp/dts'
+     - '/home/gustavo1/zephyrproject/modules/hal/stm32/dts'
+     - '/home/gustavo1/zephyrproject/modules/hal/ti/dts'
+     - '/home/gustavo1/zephyrproject/zephyr/include'
+     - '/home/gustavo1/zephyrproject/zephyr/include/zephyr'
+     - '/home/gustavo1/zephyrproject/zephyr/dts/common'
+     - '/home/gustavo1/zephyrproject/zephyr/dts/vendor'
+     - '/home/gustavo1/zephyrproject/zephyr/dts/rx'
+     - '/home/gustavo1/zephyrproject/zephyr/dts/x86'
+     - '/home/gustavo1/zephyrproject/zephyr/dts/xtensa'
+     - '/home/gustavo1/zephyrproject/zephyr/dts/sparc'
+     - '/home/gustavo1/zephyrproject/zephyr/dts/riscv'
+     - '/home/gustavo1/zephyrproject/zephyr/dts/posix'
+     - '/home/gustavo1/zephyrproject/zephyr/dts/arm64'
+     - '/home/gustavo1/zephyrproject/zephyr/dts/arm'
+     - '/home/gustavo1/zephyrproject/zephyr/dts/arc'
+     - '/home/gustavo1/zephyrproject/zephyr/dts'
+  kconfig:
+    files:
+     - '/home/gustavo1/zephyrproject/zephyr/boards/espressif/esp32_devkitc/esp32_devkitc_procpu_defconfig'
+     - '/home/gustavo1/zephyrproject/raptor_led_gui/prj.conf'
+    user-files:
+     - '/home/gustavo1/zephyrproject/raptor_led_gui/prj.conf'
+  toolchain:
+    name: 'zephyr'
+    path: '/home/gustavo1/zephyr-sdk-0.16.5'
+  zephyr:
+    version: '4.3.99'
+    zephyr-base: '/home/gustavo1/zephyrproject/zephyr'
+version: '0.1.0'
+west:
+  command: '/home/gustavo1/.local/bin/west build -b esp32_devkitc/esp32/procpu'
+  topdir: '/home/gustavo1/zephyrproject'
+  version: '1.5.0'
